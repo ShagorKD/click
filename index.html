@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <!--for logo link-->
+    <link rel="shortcut icon" href="img/lo.png" type="image/x-icon">
+    <!--Bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--CSS Linnk-->
+    <link rel="stylesheet" href="prity.css">
+
+
+</head>
+
+<body>
+    <!-- <embed src="img/prity.mp3" loop="true" autostart="true" width="0" height="0"> -->
+    <!-- <audio loop preload="metadata">
+        <source src="img/prity.mp3" type="audio/mpeg">
+    </audio>
+    <div class="open_grepper_editor" title="Edit & Save To Grepper"></div> -->
+    <audio id="audioplayer" src="img/prity.mp3" type="audio/mpeg" loop="loop"> </audio>
+
+    <div class="area">
+
+        <div class="first text-center" id="fst">
+            <h1 class=" text-danger">Prity</h1>
+            <img src="img/lem.png" alt="" srcset=""><br>
+            <button id="clk" class="btn btn-danger">Clic<span id="k"><i>K</i></span></button>
+        </div>
+        <div class="snd text-center" id="prty">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/pr (1).jpg" alt="" srcset="">
+                        <br>
+                        <h1 class="text-danger head">I LOVE YOU <span>PRITY</span></h1>
+
+
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="img/lo.png" alt="" srcset=""><br>
+                        <br>
+                        <h1 class="text-danger"> I LOVE YOU <span id="cnt">088</span><b>+</b></h1>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const b = document.getElementById("clk");
+        b.addEventListener("click", function () {
+            bt = document.getElementById("fst").style.display = "none";
+            document.getElementById("prty").style.display = "block";
+
+        })
+        let counts = setInterval((updated), 150);
+        let upto = 089;
+        function updated() {
+            var count = document.getElementById("cnt");
+            count.innerHTML = ++upto;
+            if (upto === 0) {
+                clearInterval(counts);
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("audioplayer").play();
+        }
+    </script>
+
+    <!--JS Links-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
